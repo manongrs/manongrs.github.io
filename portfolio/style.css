@@ -1,0 +1,445 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  background-color: #106D7E;
+  color: lightslategrey;
+  height: 100vh;
+  width: 20%; /* 20% de la largeur de l'écran */
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+/* Styling for image in the navigation bar */
+.imgProfil {
+  border-radius: 50%; /* Rendre l'image ronde */
+  display: block; /* Assurer que l'image soit un élément de bloc */
+  margin: 30px auto 0; /* Centrer l'image horizontalement et ajouter de l'espace en haut */
+  width: 160px; /* Modifier la largeur de l'image */
+  height: 160px; /* Garder le ratio d'aspect original */
+
+}
+
+/* Styling for navigation name */
+.nomNav {
+  text-align: center; /* Centrer le texte */
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9); /* Ajouter une ombre blanche au texte */
+  animation: clignotement 2s ease-in-out infinite; /* Animation de clignotement */
+  color: white; /* Couleur de texte par défaut */
+  font-size: 25px; /* Augmentation de la taille du texte */
+}
+
+/* Conteneur des icônes */
+.icones {
+  display: flex; /* Utilisation de flexbox */
+  justify-content: center; /* Centrer horizontalement */
+  gap: 20px; /* Espacement entre les icônes */
+}
+
+/* Styles pour les icônes LinkedIn et e-mail */
+.icone-linkedin,
+.icone-email {
+  display: flex; /* Utiliser la disposition flexbox */
+  align-items: center; /* Centrer verticalement */
+  background-color: orange; /* Fond orange */
+  border-radius: 50%; /* Bordure ronde */
+  padding: 10px; /* Espacement interne */
+}
+
+/* Styles pour les liens des icônes */
+.icones a {
+  color: white; /* Couleur du texte des icônes */
+  text-decoration: none; /* Supprimer la décoration du texte */
+}
+
+
+nav ul {
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  padding: 18px; /* Espacement interne */
+  text-align: center;
+  font-size: 18px; /* Augmentation de la taille du texte */
+  color: lightgray;
+}
+
+nav ul li:last-child {
+  border-bottom: none;
+}
+
+nav ul li a {
+  color: lightgray; /* Couleur du texte */
+  text-decoration: none;
+  display: flex; /* Utiliser la disposition flexbox */
+  align-items: center; /* Aligner verticalement */
+}
+
+nav ul li a i {
+  color: white; /* Couleur des icônes */
+  margin-right: 5px; /* Espacement entre l'icône et le texte */
+}
+.content {
+  margin-left: 20%; /* Pour que le contenu ne soit pas masqué sous la barre de navigation */
+  padding: 20px;
+  text-align: center;
+
+}
+
+/* Styling for paragraphs */
+.content p {
+  font-size: 17px; /* Taille de la police pour les paragraphes */
+}
+
+.footer {
+  background-color: orange; /* Fond orange */
+  text-align: center; /* Centrer le texte */
+  padding: 5px 0; /* Espacement interne */
+  color: white; /* Couleur du texte */
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9); /* Ajouter une ombre blanche au texte */
+}
+
+/* Styling for card */
+
+/* Styling for cards grid */
+.cards.grid {
+  display: flex; /* Utilisation de flexbox */
+  flex-wrap: wrap; /* Permettre le passage à la ligne */
+  justify-content: space-between; /* Espacement égal entre les cartes */
+}
+
+/* Styling for card */
+.card {
+  background-color: #E7F7F8; /* Couleur de fond */
+  border-radius: 10px; /* Bord arrondi */
+  padding: 20px; /* Espacement intérieur */
+  margin-bottom: 20px; /* Marge en bas pour séparer les cartes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  width: calc(25% - 20px); /* 4 cartes par ligne avec marges entre les cartes */
+  box-sizing: border-box; /* Inclure la marge et le rembourrage dans la largeur */
+}
+
+/* Styling for title inside card */
+.card h3.title {
+  color: #333; /* Couleur du titre */
+  font-size: 20px; /* Taille du titre */
+  margin-bottom: 10px; /* Marge en bas pour séparer le titre du contenu */
+}
+
+/* Styling for content inside card */
+.card p {
+  color: #666; /* Couleur du contenu */
+  font-size: 16px; /* Taille du contenu */
+}
+
+/* Styling for button inside card */
+.card .button {
+  background-color: #106D7E; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte du bouton */
+  text-decoration: none; /* Supprimer la décoration de lien */
+  display: inline-block; /* Afficher en ligne */
+  padding: 10px 20px; /* Espacement intérieur */
+  border-radius: 5px; /* Bord arrondi */
+  transition: background-color 0.3s ease; /* Transition en douceur */
+}
+
+/* Styling for button hover effect */
+.card .button:hover {
+  background-color: orange; /* Couleur de fond au survol */
+  color: white; /* Texte orange */
+}
+
+/* Styling for title inside content */
+.titrePortfolio {
+  color: #106D7E; /* Couleur du titre */
+  font-size: 30px; /* Taille du titre */
+}
+
+/* Styling for text inside content */
+.textePortfolio {
+  color: #666; /* Couleur du texte */
+  font-size: 20px; /* Taille du texte */
+}
+
+
+/* Styling for section2 */
+.section2 {
+  background-color: #E4F9FC; /* Fond d'une couleur différente */
+  padding: 80px; /* Espacement intérieur */
+  text-align: justify; /* Justifier le texte */
+}
+
+.section3 {
+  background-color: white; /* Fond d'une couleur différente */
+  padding: 80px; /* Espacement intérieur */
+  text-align: justify; /* Justifier le texte */
+}
+
+.section4 {
+  background-color: #E4F9FC; /* Fond d'une couleur différente */
+  padding: 80px; /* Espacement intérieur */
+  text-align: justify; /* Justifier le texte */
+}
+
+.cv-container {
+  margin-top: 60px; /* Ajoute de la marge en haut */
+  text-align: center; /* Centre le contenu horizontalement */
+}
+
+/* Style du bouton CV */
+.btn-cv {
+  background-color: orange; /* Fond orange */
+  color: white; /* Texte blanc */
+  border: 3px solid white; /* Bordure blanche */
+  border-radius: 10px; /* Coins arrondis */
+  padding: 8px 16px; /* Espacement interne */
+  text-decoration: none; /* Supprimer la décoration du texte */
+  transition: background-color 0.3s, color 0.3s; /* Transition fluide */
+  font-size: 20px; /* Taille de la police */
+  width: auto; /* Taille du bouton en fonction du contenu */
+}
+
+/* Style du bouton au survol */
+.btn-cv:hover {
+  background-color: #106D7E; /* Fond blanc */
+  color: white; /* Texte orange */
+}
+
+
+/* Styling for titreSection2 */
+.titreSection2 {
+  color: #106D7E; /* Couleur du titre */
+  font-size: 30px; /* Taille du titre */
+  text-align: center; /* Centrage horizontal */
+}
+
+.titreSection3 {
+  color: #106D7E; /* Couleur du titre */
+  font-size: 30px; /* Taille du titre */
+  text-align: center; /* Centrage horizontal */
+}
+
+/* Styling for texteSection2 */
+.texteSection2 {
+  color: #666; /* Couleur du texte */
+  font-size: 18px; /* Taille du texte */
+  text-align: center; /* Centrage horizontal */
+}
+
+/* Styling for texteSection4 */
+.texteSection4 {
+  color: #666; /* Couleur du texte */
+  font-size: 18px; /* Taille du texte */
+  text-align:left; /* Centrage horizontal */
+}
+
+
+/* style de la barre de selection de projet */
+
+.navSelection {
+    list-style: none; /* Supprimer les puces */
+    padding: 15px; /* Ajouter un peu de padding pour l'espace intérieur */
+    margin: 0 auto; /* Centrer horizontalement */
+    background-color: #106D7E; /* Fond bleu */
+    border-radius: 20px; /* Coins arrondis */
+    width: 50%; /* Largeur de 50% de son conteneur */
+    text-align: center; /* Centrer le texte */
+}
+
+.navSelection li {
+  display: inline; /* Afficher les éléments en ligne */
+  margin-right: 10px; /* Ajouter de l'espace entre les éléments */
+}
+
+.navSelection li a {
+  text-decoration: none; /* Supprimer la décoration des liens */
+  color: #333; /* Couleur du texte */
+  padding: 5px 10px; /* Espacement interne */
+  border-radius: 20px; /* Coins arrondis */
+  background-color: #f9f9f9; /* Couleur de fond */
+}
+
+.navSelection li a:hover {
+  background-color: orange; /* Couleur de fond au survol */
+  color: white; /* Texte orange */
+}
+
+
+/* Styling for cards grid */
+.options.grid {
+  display: flex; /* Utilisation de flexbox */
+  justify-content: center; /* Centrer les éléments horizontalement */
+  flex-wrap: wrap; /* Permettre le passage à la ligne */
+}
+
+/* Styling for card */
+.option {
+  background-color: #E7F7F8; /* Couleur de fond */
+  border-radius: 10px; /* Bord arrondi */
+  padding: 20px; /* Espacement intérieur */
+  margin: 20px auto; /* Marge en haut et en bas automatique pour centrer horizontalement */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  width: calc(50% - 30px); /* Largeur de 50% de la largeur du conteneur avec marges de 20px de chaque côté */
+  box-sizing: border-box; /* Inclure la marge et le rembourrage dans la largeur */
+}
+
+/* Styling for title inside card */
+.option h3.title {
+  color: #333; /* Couleur du titre */
+  font-size: 20px; /* Taille du titre */
+  margin-bottom: 10px; /* Marge en bas pour séparer le titre du contenu */
+}
+
+/* Styling for content inside card */
+.option p {
+  color: #666; /* Couleur du contenu */
+  font-size: 16px; /* Taille du contenu */
+}
+
+
+
+
+/* Styling for cards grid */
+.competences.grid {
+  display: flex; /* Utilisation de flexbox */
+  flex-wrap: wrap; /* Permettre le passage à la ligne */
+  justify-content: space-between; /* Espacement égal entre les cartes */
+}
+
+/* Styling for card */
+.competence{
+  background-color: white; /* Couleur de fond */
+  border-radius: 10px; /* Bord arrondi */
+  padding: 20px; /* Espacement intérieur */
+  margin-bottom: 20px; /* Marge en bas pour séparer les cartes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  width: calc(33.33% - 20px); /* 3 cartes par ligne avec marges entre les cartes */
+  box-sizing: border-box; /* Inclure la marge et le rembourrage dans la largeur */
+}
+
+/* Styling for content inside card */
+.competence p {
+  color: #333; /* Couleur du contenu */
+  font-size: 25px; /* Taille du contenu */
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.competence p i {
+  font-size: 35px; /* Taille de l'icône */
+  margin-right: 5px; /* Espace entre l'icône et le texte */
+}
+
+.competence p i.fa-html5 {
+  color: #E34F26; /* Couleur orange HTML */
+}
+
+.competence p i.fa-css3-alt {
+  color: #1572B6; /* Couleur bleue CSS */
+}
+
+.competence p i.fa-php {
+  color: #777BB4; /* Couleur violette PHP */
+}
+
+.competence p i.fa-java {
+  color: #007396; /* Couleur bleu foncé Java */
+}
+
+.competence p i.fa-python {
+  color: #306998; /* Couleur bleue Python */
+}
+
+
+.competence p i.fa-android {
+  color: #3DDC84; /* Couleur verte Android */
+}
+
+
+
+/* Styling for cards grid */
+.defIntelligenceArtificielle.grid {
+  display: flex; /* Utilisation de flexbox */
+  flex-wrap: wrap; /* Permettre le passage à la ligne */
+  justify-content: space-between; /* Espacement égal entre les cartes */
+}
+
+/* Styling for card */
+.def{
+  background-color: white; /* Couleur de fond */
+  border-radius: 10px; /* Bord arrondi */
+  padding: 20px; /* Espacement intérieur */
+  margin-bottom: 20px; /* Marge en bas pour séparer les cartes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  width: calc(33.33% - 20px); /* 3 cartes par ligne avec marges entre les cartes */
+  box-sizing: border-box; /* Inclure la marge et le rembourrage dans la largeur */
+}
+
+/* Styling for content inside card */
+.def h2 {
+  color: #333; /* Couleur du contenu */
+  font-size: 18px; /* Taille du contenu */
+  text-align:left;
+  font-weight: bold;
+}
+
+
+.def p {
+  color: #333; /* Couleur du contenu */
+  font-size: 15px; /* Taille du contenu */
+  text-align:left;
+}
+
+
+
+
+/* Styling for button inside card */
+.def .button {
+  background-color: #106D7E; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte du bouton */
+  text-decoration: none; /* Supprimer la décoration de lien */
+  display: inline-block; /* Afficher en ligne */
+  padding: 10px 20px; /* Espacement intérieur */
+  border-radius: 5px; /* Bord arrondi */
+  transition: background-color 0.3s ease; /* Transition en douceur */
+}
+
+/* Styling for button hover effect */
+.def .button:hover {
+  background-color: orange; /* Couleur de fond au survol */
+  color: white; /* Texte orange */
+}
+
+
+/* Styling for image in the navigation bar */
+.imgStage {
+  border-radius: 50%; /* Rendre l'image ronde */
+  display: block; /* Assurer que l'image soit un élément de bloc */
+  margin: 30px auto 0; /* Centrer l'image horizontalement et ajouter de l'espace en haut */
+  width: 160px; /* Modifier la largeur de l'image */
+  height: 160px; /* Garder le ratio d'aspect original */
+
+}
+
+.button2 {
+  background-color: #106D7E; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte du bouton */
+  text-decoration: none; /* Supprimer la décoration de lien */
+  padding: 10px 20px; /* Espacement intérieur */
+  border-radius: 5px; /* Bord arrondi */
+  transition: background-color 0.3s ease; /* Transition en douceur */
+  text-align: center;
+}
+
+/* Styling for button hover effect */
+.button2:hover {
+  background-color: orange; /* Couleur de fond au survol */
+  color: white; /* Texte orange */
+}
